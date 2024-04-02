@@ -1,0 +1,10 @@
+---
+- name: First Playbook
+  hosts: developers
+  become: yes
+  tasks:
+    - name: ping
+      ansible.builtin.ping:
+    - name: update system
+      apt:
+        update_cache: yes
